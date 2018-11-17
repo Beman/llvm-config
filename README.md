@@ -13,5 +13,5 @@ c:
 cd \bgd
 git clone git@github.com:Beman/llvm-config.git
 cd \
-mklink .clang-config \bgd\llvm-config\.clang-format
+mklink .clang-format \bgd\llvm-config\.clang-format
 ```
