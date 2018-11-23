@@ -2,6 +2,13 @@
 
 // test some multi-statement examples to verify they don't get messed up by single-statement changes
 
+int main()
+{
+
+  bool x = true;
+  int y = 0;
+  int z = 0;
+
 // case 1a
 if (x) { y = 1; z = 2; }
 
@@ -43,3 +50,6 @@ if (x)
 if (x) {
   y = 1;
   }
+
+return 1;
+}
