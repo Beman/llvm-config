@@ -11,7 +11,7 @@ AlignTrailingComments: 'true'
 AllowAllParametersOfDeclarationOnNextLine: 'true'
 AllowShortBlocksOnASingleLine: 'true'
 AllowShortCaseLabelsOnASingleLine: 'false'
-AllowShortFunctionsOnASingleLine: All
+AllowShortFunctionsOnASingleLine: Inline
 AllowShortIfStatementsOnASingleLine: 'false'
 AllowShortLoopsOnASingleLine: 'false'
 # AlwaysBreakAfterDefinitionReturnType is deprecated
@@ -20,9 +20,13 @@ AlwaysBreakBeforeMultilineStrings: 'true'
 AlwaysBreakTemplateDeclarations: 'true'
 BinPackArguments: 'true'
 BinPackParameters: 'true'
+
+BreakBeforeBraces: Custom
+# If BreakBeforeBraces is Custom, BraceWrapping specifies how each brace case is handled.
+# Otherwise, BraceWrapping is ignored.
 BraceWrapping:   
   AfterClass:      true
-  AfterControlStatement: true
+  AfterControlStatement: false
   AfterEnum:       true
   AfterFunction:   true
   AfterNamespace:  true
@@ -33,11 +37,11 @@ BraceWrapping:
   BeforeCatch:     false
   BeforeElse:      false
   IndentBraces:    false
-  SplitEmptyFunction: true
+  SplitEmptyFunction: false
   SplitEmptyRecord: false
   SplitEmptyNamespace: true
+  
 BreakBeforeBinaryOperators: All
-BreakBeforeBraces: Allman
 BreakBeforeInheritanceComma: false
 BreakBeforeTernaryOperators: true
 BreakConstructorInitializersBeforeComma: false
