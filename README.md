@@ -6,7 +6,7 @@ on your development system and then put a symlink .clang-format ->
 llvm-config/.clang-config in a known parent directory (such as C:\ on Windows or
 /usr/your-home on Linux).
 
-*Windows Instalation Example*  
+## Windows Instalation Example ##  
 
 ```
 c:
@@ -16,9 +16,17 @@ cd \
 mklink .clang-format \bgd\llvm-config\.clang-format
 
 ```
-*Windows Use Examples*
+## Windows Use Examples ##
 
-Note that on Windows option arguments are not delimited with quote marks. 
+On Windows option arguments are not delimited with quote marks. 
+
+### Clang-format ###
+
+```
+clang-format -style=file test.cpp >output.cpp
+```
+
+### Clang-tidy ###
 
 ```
 clang-tidy -list-checks -checks=* | grep readability
@@ -55,5 +63,5 @@ clang-tidy -list-checks -checks=* | grep readability
     readability-string-compare
     readability-uniqueptr-delete-release
     
-clang-tidy -checks=readability-braces-around-statements -fix test.cpp -- -std=c++11
+clang-tidy -checks=readability-braces-around-statements -fix test.cpp -- -I/boost/develop -std=c++11
 ```
