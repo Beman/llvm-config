@@ -2,9 +2,9 @@
 LLVM configuration files such as `.clang-format` and `.clang-tidy`
 
 One way to use clang-format with this repository is to clone it to a convenient location
-on your development system and then put a symlink .clang-format ->
-llvm-config/.clang-config in a known parent directory (such as C:\ on Windows or
-/usr/your-home on Linux).
+on your development system and then put a symlink from `.clang-format` to
+`llvm-config/.clang-config` in a known parent directory (such as `C:\` on Windows or
+`/usr/your-home` on Linux).
 
 ## Windows Instalation Example ##  
 
@@ -14,7 +14,6 @@ cd \bgd
 git clone git@github.com:Beman/llvm-config.git
 cd \
 mklink .clang-format \bgd\llvm-config\.clang-format
-
 ```
 ## Windows Use Examples ##
 
@@ -64,4 +63,7 @@ clang-tidy -list-checks -checks=* | grep readability
     readability-uniqueptr-delete-release
     
 clang-tidy -checks=readability-braces-around-statements -fix test.cpp -- -I/boost/develop -std=c++11
+
+clang-tidy -checks=-*,clang-analyzer-*,-clang-analyzer-cplusplus* test.cpp -- -I/boost/develop -std=c++11
 ```
+In the last example, `-*` disables all default checks, `clang-analyzer-*` enables all `clang-analyzer-` checks, but then `-clang-analyzer-cplusplus*` disables the `clang-analyzer-cplusplus` subset of those checks. 
