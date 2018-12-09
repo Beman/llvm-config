@@ -71,7 +71,7 @@ PenaltyBreakBeforeFirstCallParameter: 19
 PenaltyBreakComment: 300
 PenaltyBreakFirstLessLess: 120
 PenaltyBreakString: 1000
-PenaltyBreakTemplateDeclaration: 10
+#PenaltyBreakTemplateDeclaration: 10      # error in 6.0
 PenaltyExcessCharacter: 1000000
 PenaltyReturnTypeOnItsOwnLine: 200
 PointerAlignment: Left
@@ -81,11 +81,11 @@ SortUsingDeclarations: true
 SpaceAfterCStyleCast: 'true'
 SpaceAfterTemplateKeyword: 'true'
 SpaceBeforeAssignmentOperators: 'true'
-SpaceBeforeCpp11BracedList: true
-SpaceBeforeCtorInitializerColon: true
-SpaceBeforeInheritanceColon: true
+#SpaceBeforeCpp11BracedList: true         # error in 6.0
+#SpaceBeforeCtorInitializerColon: true    # error in 6.0
+#SpaceBeforeInheritanceColon: true        # error in 6.0
 SpaceBeforeParens: ControlStatements
-SpaceBeforeRangeBasedForLoopColon: true
+#SpaceBeforeRangeBasedForLoopColon: true  # error in 6.0
 SpaceInEmptyParentheses: 'false'
 SpacesBeforeTrailingComments: '2'
 SpacesInAngles: 'false'
